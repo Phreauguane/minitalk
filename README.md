@@ -25,6 +25,12 @@ The client sends data to the server bit by bit using SIGUSR1 for 1 and SIGUSR2 f
 After each signal is sent the client waits for the server's confirmation.
 (a limit of 50ms per bit is set, after that the client exits with an error)
 
+The server receives each bit and sends SIGUSR2 back to the client.
+
+After 8 bits, the server received the data for a char and prints it to the terminal, then SIGUSR1 is sent back to the client.
+
+The client repeats the operation for each char of the given message and then exits.
+
 ### usefull links :
 
 https://medium.com/@oduwoledare/42-minitalk-explained-5b236adc2c24
