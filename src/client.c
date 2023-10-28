@@ -6,7 +6,7 @@
 /*   By: jde-meo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 19:30:23 by jde-meo           #+#    #+#             */
-/*   Updated: 2023/10/28 16:34:18 by jde-meo          ###   ########.fr       */
+/*   Updated: 2023/10/28 16:57:12 by jde-meo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,10 @@ void	send_char(char c, pid_t pid)
 			kill(pid, SIGUSR2);
 		while (g_receiver == 0)
 		{
-			if (timer >= 1000)
+			if (timer >= 50)
 				exit_handler("No responce from server");
 			timer++;
-			usleep(100);
+			usleep(1000);
 		}
 		g_receiver = 0;
 		bit_index--;
