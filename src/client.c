@@ -6,7 +6,7 @@
 /*   By: jde-meo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 19:30:23 by jde-meo           #+#    #+#             */
-/*   Updated: 2023/10/28 16:57:12 by jde-meo          ###   ########.fr       */
+/*   Updated: 2023/10/29 17:08:47 by jde-meo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	sig_handler(int signum, siginfo_t *info, void *context)
 
 	(void)info;
 	(void)context;
-	if  (signum == SIGUSR2 || signum == SIGUSR1)
+	if (signum == SIGUSR2 || signum == SIGUSR1)
 		g_receiver = 1;
 	if (signum == SIGUSR2)
 		bits++;
