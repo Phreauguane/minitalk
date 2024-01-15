@@ -14,7 +14,7 @@ Then you can start the server using `./server`.
 
 The server will print his PID.
 
-Then run he client with `./client <server_pid> <message>`.
+Then run the client with `./client <server_pid> <message>`.
 
 ### how i works ?
 
